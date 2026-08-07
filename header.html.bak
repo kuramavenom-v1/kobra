@@ -1,7 +1,7 @@
 <!-- الهيدر الاحترافي -->
 <header class="header">
     <div class="container">
-        <a href="index.html" class="logo">☂ Korda</a>
+        <a href="index.html" class="logo">Korda</a>
         <nav class="nav-links">
             <a href="index.html" class="nav-link">الرئيسية</a>
             <a href="about.html" class="nav-link">من نحن</a>
