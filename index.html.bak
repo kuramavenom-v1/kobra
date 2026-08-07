@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korda | الرئيسية</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- الهيدر الاحترافي -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">Korda</a>
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link active">الرئيسية</a>
+                <a href="about.html" class="nav-link">من نحن</a>
+                <a href="services.html" class="nav-link">الخدمات</a>
+                <a href="portfolio.html" class="nav-link">الأعمال</a>
+                <a href="team.html" class="nav-link">الفريق</a>
+            </nav>
+            <div class="header-controls">
+                <a href="index-en.html" class="btn-lang">EN</a>
+                <a href="services.html" class="btn-primary">تواصل معنا</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- قسم Hero الرئيسي -->
+    <section class="hero">
+        <div class="container">
+            <h1>نبتكر حلولاً تقنية ترسم مستقبل عملك</h1>
+            <p>وكالة رقمية متكاملة تقدم أحدث تقنيات الويب وتطوير البرمجيات للشركات الطموحة.</p>
+            <div class="hero-buttons">
+                <a href="portfolio.html" class="btn-primary">استعرض أعمالنا</a>
+                <a href="about.html" class="btn-outline">تعرف علينا</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم مميزات الشركة -->
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="section-title">لماذا اختيار Korda</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>احترافية عالية</h3>
+                    <p>نلتزم بأعلى معايير الجودة العالمية في تسليم المشاريع البرمجية في وقتها المحدد.</p>
+                </div>
+                <div class="card">
+                    <h3>تصميم عصري</h3>
+                    <p>واجهات مستخدم تجمع بين جمالية التصميم وسلاسة التجربة لضمان رضا عملائك.</p>
+                </div>
+                <div class="card">
+                    <h3>دعم مستمر</h3>
+                    <p>فريق فني متكامل جاهز لتقديم الدعم والصيانة وتطوير نظامك بشكل مستمر.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- الفوتر الرسمي -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Korda. جميع الحقوق محفوظة.</p>
+                <div class="footer-links">
+                    <a href="privacy.html">سياسة الخصوصية</a>
+                    <a href="terms.html">الشروط والأحكام</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

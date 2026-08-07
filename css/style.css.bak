@@ -1,20 +1,13 @@
+/* =========================================
+   الإعدادات العامة (تصميم داكن للشركات الكبرى)
+========================================= */
 :root {
-    --bg-color: #ffffff;
-    --text-color: #000000;
-    --card-bg: #f9f9f9;
-    --section-bg: #f1f1f1;
-    --border: #e0e0e0;
-    --glow-color: #00f3ff; 
-    --glow-shadow: 0 0 10px var(--glow-color);
-    --glow-shadow-hover: 0 0 20px var(--glow-color), 0 0 40px var(--glow-color);
-}
-
-[data-theme="dark"] {
-    --bg-color: #050505;
-    --text-color: #ffffff;
-    --card-bg: #111111;
-    --section-bg: #0a0a0a;
-    --border: #333333;
+    --bg-color: #050505;       /* أسود داكن جداً وأنيق */
+    --text-color: #ffffff;     /* أبيض نقي */
+    --card-bg: #111111;        /* رمادي داكن للبطاقات */
+    --section-bg: #0a0a0a;     /* تدرج داكن للخلفيات */
+    --border: #222222;         /* حدود هادئة وخفيفة جداً */
+    --accent-color: #ffffff;   /* لون التفاعل (أبيض) */
 }
 
 * {
@@ -27,8 +20,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--bg-color);
     color: var(--text-color);
-    line-height: 1.6;
-    transition: background-color 0.4s ease, color 0.4s ease;
+    line-height: 1.7;
 }
 
 .container {
@@ -47,43 +39,13 @@ ul {
     list-style: none;
 }
 
-/* الأزرار وتصميمها كأزرار حقيقية */
-.btn, .nav-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 6px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-align: center;
-    background-color: transparent;
-    color: var(--text-color);
-    border: 1px solid var(--border);
-    font-size: 14px;
-}
-
-.btn:hover, .nav-btn:hover {
-    border-color: var(--glow-color);
-    box-shadow: var(--glow-shadow);
-    color: var(--glow-color);
-}
-
-.btn-primary {
-    border-color: var(--glow-color);
-    box-shadow: var(--glow-shadow);
-}
-
-.btn-primary:hover {
-    background-color: var(--glow-color);
-    color: #000;
-    box-shadow: var(--glow-shadow-hover);
-}
-
-/* الهيدر */
+/* =========================================
+   الهيدر والتنقل (Header & Nav)
+========================================= */
 .header {
     background-color: var(--bg-color);
     border-bottom: 1px solid var(--border);
-    padding: 15px 0;
+    padding: 20px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -93,57 +55,143 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
 }
 
 .logo {
-    font-size: 26px;
+    font-size: 24px;
     font-weight: bold;
-    text-transform: uppercase;
     letter-spacing: 2px;
-    text-shadow: 0 0 5px var(--glow-color);
+    text-transform: uppercase;
 }
 
-/* أزرار التنقل العلوية كأزرار حقيقية */
 .nav-links {
     display: flex;
-    gap: 10px;
+    gap: 30px;
     align-items: center;
-    flex-wrap: wrap;
+}
+
+.nav-link {
+    font-size: 15px;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.nav-link:hover, .nav-link.active {
+    opacity: 1;
 }
 
 .header-controls {
     display: flex;
-    gap: 10px;
+    gap: 15px;
     align-items: center;
 }
 
-/* أقسام عامة */
-.section-padding { padding: 80px 0; }
-.bg-light { background-color: var(--section-bg); }
-.section-title { text-align: center; font-size: 32px; margin-bottom: 40px; }
-
-/* الهيرو والبانر */
-.hero {
-    background-color: var(--section-bg);
-    padding: 100px 0;
-    text-align: center;
-    border-bottom: 1px solid var(--border);
+/* =========================================
+   الأزرار (Buttons)
+========================================= */
+.btn-primary {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px 22px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.3s;
 }
-.hero h1 { font-size: 44px; margin-bottom: 20px; text-shadow: 0 0 10px rgba(0, 243, 255, 0.3); }
-.hero p { font-size: 18px; margin-bottom: 30px; opacity: 0.8; }
-.hero .buttons { display: flex; justify-content: center; gap: 15px; }
+
+.btn-primary:hover {
+    opacity: 0.85;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #444444;
+    padding: 10px 22px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.btn-outline:hover {
+    border-color: #ffffff;
+}
+
+.btn-lang {
+    font-size: 14px;
+    font-weight: bold;
+    opacity: 0.8;
+    padding: 6px 12px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+}
+
+.btn-lang:hover {
+    opacity: 1;
+    border-color: #555555;
+}
+
+/* =========================================
+   الأقسام والبطاقات (Sections & Cards)
+========================================= */
+.section-padding {
+    padding: 90px 0;
+}
+
+.section-title {
+    font-size: 32px;
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.hero {
+    padding: 130px 0;
+    text-align: center;
+    background-color: var(--bg-color);
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero p {
+    font-size: 18px;
+    opacity: 0.7;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
 
 .page-banner {
-    background-color: var(--section-bg);
-    padding: 50px 0;
+    padding: 70px 0;
     text-align: center;
+    background-color: var(--card-bg);
     border-bottom: 1px solid var(--border);
 }
-.page-banner h1 { font-size: 32px; text-shadow: 0 0 5px var(--glow-color); }
 
-/* الشبكات والبطاقات */
+.page-banner h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.page-banner p {
+    opacity: 0.7;
+}
+
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -152,41 +200,88 @@ ul {
 
 .card {
     background-color: var(--card-bg);
-    padding: 25px;
-    border-radius: 8px;
+    padding: 35px;
+    border-radius: 6px;
     border: 1px solid var(--border);
-    transition: 0.3s ease;
+    transition: 0.3s;
 }
 
 .card:hover {
-    border-color: var(--glow-color);
-    box-shadow: var(--glow-shadow);
-    transform: translateY(-5px);
+    border-color: #444444;
 }
 
-.card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 6px;
+.card h3 {
     margin-bottom: 15px;
-    border: 1px solid var(--border);
+    font-size: 20px;
 }
 
-.team-card { text-align: center; }
-.team-card img {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    margin: 0 auto 15px;
-    border: 2px solid var(--glow-color);
-    box-shadow: var(--glow-shadow);
+.card p {
+    opacity: 0.7;
+    font-size: 15px;
 }
 
-/* الفوتر */
+/* =========================================
+   الفوتر (Footer)
+========================================= */
 .footer {
     background-color: var(--card-bg);
     border-top: 1px solid var(--border);
     padding: 40px 0;
-    text-align: center;
+    margin-top: 50px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-content p {
+    opacity: 0.6;
+    font-size: 14px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    opacity: 0.6;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+}
+
+/* =========================================
+   التجاوب مع الشاشات (Responsive)
+========================================= */
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
 }
