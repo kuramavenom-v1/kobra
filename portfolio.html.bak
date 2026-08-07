@@ -40,7 +40,8 @@
             <div class="grid">
                 <!-- المشروع 1 -->
                 <div class="card">
-<img src="images/portfolio/project1.jpg" alt="منصة تعليمية إلكترونية">
+                    <div style="background: #e2e8f0; height: 200px; border-radius: 6px; margin-bottom: 15px; display: flex; align-items: center; justify-content: center; color: #94a3b8;">المشروع 1</div>
+                    <h3>منصة تعليمية إلكترونية</h3>
                     <p>برمجة وتطوير منصة متكاملة للتعليم عن بعد مع نظام إدارة التعلم (LMS).</p>
                     <br>
                     <span style="color: var(--primary); font-size: 14px; font-weight: bold;">تطوير الويب</span>

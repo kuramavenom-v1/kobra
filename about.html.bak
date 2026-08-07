@@ -5,11 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Korda | من نحن</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
 
-    <!-- هذا السطر سيقوم بسحب الهيدر من ملف header.html -->
-    <div id="header-container"></div>
+    <!-- Header (نفس الكود السابق) -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">Korda<span>.</span></a>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="services.html">الخدمات</a></li>
+                    <li><a href="portfolio.html">الأعمال</a></li>
+                    <li><a href="team.html">الفريق</a></li>
+                </ul>
+            </nav>
+            <a href="service-details.html" class="btn btn-primary">تواصل معنا</a>
+        </div>
+    </header>
 
     <!-- Page Banner -->
     <div class="page-banner">
@@ -42,40 +57,36 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer (نفس الكود السابق) -->
     <footer class="footer">
         <div class="container">
             <div class="footer-bottom">
-                <p>كوردا معكم لحياة أفضل 🌙</p>
+                <p>كوردا معكم ل حياه افضل 🌙</p>
             </div>
         </div>
     </footer>
+<script>
+    // جلب الهيدر
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header-container').innerHTML = data;
 
-    <!-- سكريبت جلب الهيدر وتشغيل الوضع الليلي -->
-    <script>
-        fetch('header.html')
-            .then(response => response.text())
-            .then(data => {
-                // وضع الهيدر داخل الحاوية الفارغة
-                document.getElementById('header-container').innerHTML = data;
-
-                // تفعيل زر الوضع الليلي بعد تحميل الهيدر
-                const themeToggleBtn = document.getElementById('theme-toggle');
-                const body = document.body;
-                
-                themeToggleBtn.addEventListener('click', () => {
-                    const currentTheme = body.getAttribute('data-theme');
-                    if (currentTheme === 'dark') {
-                        body.removeAttribute('data-theme');
-                        themeToggleBtn.textContent = '🌙';
-                    } else {
-                        body.setAttribute('data-theme', 'dark');
-                        themeToggleBtn.textContent = '☀️';
-                    }
-                });
-            })
-            .catch(error => console.error('Error loading header:', error));
-    </script>
+            // تفعيل زر الوضع الليلي بعد تحميل الهيدر
+            const themeToggleBtn = document.getElementById('theme-toggle');
+            const body = document.body;
+            themeToggleBtn.addEventListener('click', () => {
+                const currentTheme = body.getAttribute('data-theme');
+                if (currentTheme === 'dark') {
+                    body.removeAttribute('data-theme');
+                    themeToggleBtn.textContent = '🌙';
+                } else {
+                    body.setAttribute('data-theme', 'dark');
+                    themeToggleBtn.textContent = '☀️';
+                }
+            });
+        });
+</script>
 
 </body>
 </html>
