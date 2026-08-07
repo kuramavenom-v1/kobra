@@ -5,69 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Korda | فريق العمل</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-<div id="header-container"></div>
-    <!-- Header -->
+
+    <!-- الهيدر الاحترافي -->
     <header class="header">
         <div class="container">
-            <a href="index.html" class="logo">Korda<span>.</span></a>
-            <nav class="nav">
-                <ul>
-                    <li><a href="index.html">الرئيسية</a></li>
-                    <li><a href="about.html">من نحن</a></li>
-                    <li><a href="services.html">الخدمات</a></li>
-                    <li><a href="portfolio.html">الأعمال</a></li>
-                    <li><a href="team.html">الفريق</a></li>
-                </ul>
+            <a href="index.html" class="logo">Korda</a>
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">الرئيسية</a>
+                <a href="about.html" class="nav-link">من نحن</a>
+                <a href="services.html" class="nav-link">الخدمات</a>
+                <a href="portfolio.html" class="nav-link">الأعمال</a>
+                <a href="team.html" class="nav-link active">الفريق</a>
             </nav>
-            <a href="service-details.html" class="btn btn-primary">تواصل معنا</a>
+            <div class="header-controls">
+                <a href="index-en.html" class="btn-lang">EN</a>
+                <a href="services.html" class="btn-primary">تواصل معنا</a>
+            </div>
         </div>
     </header>
 
-    <!-- Page Banner -->
-    <div class="page-banner">
+    <!-- بانر الصفحة -->
+    <section class="page-banner">
         <div class="container">
             <h1>فريق العمل</h1>
-            <p>نخبة من المبدعين والخبراء في العالم الرقمي</p>
+            <p>نخبة من المهندسين والمطورين والخبراء المكرسين لنجاح مشروعك</p>
         </div>
-    </div>
+    </section>
 
-    <!-- Team Grid -->
+    <!-- شبكة الفريق -->
     <section class="section-padding">
         <div class="container">
             <div class="grid">
-                <!-- العضو 1 -->
-                <div class="card team-card">
-                    <div style="width: 150px; height: 150px; background: #e2e8f0; border-radius: 50%; margin: 0 auto 15px; border: 3px solid var(--primary); display: flex; align-items: center; justify-content: center; color: #94a3b8;">صورة</div>
+                <!-- عضو الفريق الأول -->
+                <div class="card" style="text-align: center;">
+                    <img src="images/team/member1.jpg" alt="الرئيس التنفيذي" style="width: 140px; height: 140px; object-fit: cover; border-radius: 50%; margin: 0 auto 20px; border: 1px solid var(--border);">
                     <h3>أحمد محمد</h3>
-                    <p style="color: var(--primary); font-weight: bold; margin-bottom: 10px;">المدير التنفيذي</p>
-                    <p>خبير في استراتيجيات الأعمال وتطوير المنتجات الرقمية بخبرة تتجاوز 10 سنوات.</p>
+                    <p style="opacity: 0.6; font-size: 14px; margin-bottom: 10px;">الرئيس التنفيذي والمؤسس</p>
+                    <p style="font-size: 14px;">خبرة واسعة في إدارة الشركات التقنية وقيادة فرق التحول الرقمي.</p>
                 </div>
-                <!-- العضو 2 -->
-                <div class="card team-card">
-                    <div style="width: 150px; height: 150px; background: #e2e8f0; border-radius: 50%; margin: 0 auto 15px; border: 3px solid var(--primary); display: flex; align-items: center; justify-content: center; color: #94a3b8;">صورة</div>
-                    <h3>سارة خالد</h3>
-                    <p style="color: var(--primary); font-weight: bold; margin-bottom: 10px;">مديرة التسويق الرقمي</p>
-                    <p>متخصصة في بناء العلامات التجارية وقيادة الحملات التسويقية الناجحة.</p>
+
+                <!-- عضو الفريق الثاني -->
+                <div class="card" style="text-align: center;">
+                    <img src="images/team/member2.jpg" alt="مدير التقنية" style="width: 140px; height: 140px; object-fit: cover; border-radius: 50%; margin: 0 auto 20px; border: 1px solid var(--border);">
+                    <h3>خالد عبدالله</h3>
+                    <p style="opacity: 0.6; font-size: 14px; margin-bottom: 10px;">مدير التقنية (CTO)</p>
+                    <p style="font-size: 14px;">متخصص في هندسة البرمجيات وتطوير البنى التحتية السحابية المعقدة.</p>
                 </div>
-                <!-- العضو 3 -->
-                <div class="card team-card">
-                    <div style="width: 150px; height: 150px; background: #e2e8f0; border-radius: 50%; margin: 0 auto 15px; border: 3px solid var(--primary); display: flex; align-items: center; justify-content: center; color: #94a3b8;">صورة</div>
-                    <h3>عمر عبدالله</h3>
-                    <p style="color: var(--primary); font-weight: bold; margin-bottom: 10px;">مهندس برمجيات (Full-Stack)</p>
-                    <p>مهووس بكتابة الأكواد النظيفة وبناء أنظمة الويب المعقدة وعالية الأداء.</p>
+
+                <!-- عضو الفريق الثالث -->
+                <div class="card" style="text-align: center;">
+                    <img src="images/team/member3.jpg" alt="مصمم واجهات المستخدم" style="width: 140px; height: 140px; object-fit: cover; border-radius: 50%; margin: 0 auto 20px; border: 1px solid var(--border);">
+                    <h3>سارة أحمد</h3>
+                    <p style="opacity: 0.6; font-size: 14px; margin-bottom: 10px;">قائدة تصميم واجهات المستخدم (UI/UX)</p>
+                    <p style="font-size: 14px;">شغوفة بابتكار تجارب استخدام سلسة وتصميمات عصرية تخدم أهداف المستخدم.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- الفوتر الرسمي -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-bottom">
-                <p>كوردا معكم ل حياه افضل 🌙</p>
+            <div class="footer-content">
+                <p>&copy; 2026 Korda. جميع الحقوق محفوظة.</p>
+                <div class="footer-links">
+                    <a href="privacy.html">سياسة الخصوصية</a>
+                    <a href="terms.html">الشروط والأحكام</a>
+                </div>
             </div>
         </div>
     </footer>

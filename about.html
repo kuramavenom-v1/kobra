@@ -8,74 +8,80 @@
 </head>
 <body>
 
-    <!-- هذا السطر سيقوم بسحب الهيدر من ملف header.html -->
-    <div id="header-container"></div>
+    <!-- الهيدر الاحترافي -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">Korda</a>
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">الرئيسية</a>
+                <a href="about.html" class="nav-link active">من نحن</a>
+                <a href="services.html" class="nav-link">الخدمات</a>
+                <a href="portfolio.html" class="nav-link">الأعمال</a>
+                <a href="team.html" class="nav-link">الفريق</a>
+            </nav>
+            <div class="header-controls">
+                <a href="index-en.html" class="btn-lang">EN</a>
+                <a href="services.html" class="btn-primary">تواصل معنا</a>
+            </div>
+        </div>
+    </header>
 
-    <!-- Page Banner -->
-    <div class="page-banner">
+    <!-- بانر الصفحة -->
+    <section class="page-banner">
         <div class="container">
             <h1>من نحن</h1>
-            <p>تعرف على قصتنا ورؤيتنا المستقبلية</p>
+            <p>تعرف على قصتنا ورؤيتنا في قيادة التحول الرقمي</p>
         </div>
-    </div>
+    </section>
 
-    <!-- About Detail -->
+    <!-- محتوى صفحة من نحن -->
     <section class="section-padding">
         <div class="container">
-            <h2 class="section-title">نبذة عن Korda</h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">بدأت Korda كفكرة طموحة لتمكين الشركات من الدخول إلى العالم الرقمي بقوة وثبات. اليوم نحن وكالة تقنية متكاملة نجمع بين الإبداع البرمجي والتسويق الذكي.</p>
-            
-            <div class="grid">
-                <div class="card">
-                    <h3>الرؤية</h3>
-                    <p>أن نكون الخيار الأول للشركات الباحثة عن الابتكار والتحول الرقمي في الشرق الأوسط.</p>
+            <div class="about-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; align-items: center;">
+                <div>
+                    <img src="images/about/company-overview.jpg" alt="مكتب شركة Korda" style="width: 100%; border-radius: 8px; border: 1px solid var(--border);">
                 </div>
-                <div class="card">
-                    <h3>الرسالة</h3>
-                    <p>تقديم حلول تقنية عالية الجودة، موثوقة، وقابلة للتطوير المستمر.</p>
-                </div>
-                <div class="card">
-                    <h3>القيم</h3>
-                    <p>الشفافية، الجودة، الابتكار، والتركيز على نجاح العميل أولاً.</p>
+                <div>
+                    <h2 style="font-size: 28px; margin-bottom: 20px;">نحن وكالة تقنية متكاملة</h2>
+                    <p style="opacity: 0.8; margin-bottom: 15px; line-height: 1.8;">بدأت Korda كفكرة طموحة لتمكين الشركات من الدخول إلى العالم الرقمي بقوة وثبات. نجمع بين الإبداع البرمجي والتصميم العصري لنقدم حلولاً تُحدث فارقاً حقيقياً في أعمال عملائنا.</p>
+                    <p style="opacity: 0.8; line-height: 1.8;">نؤمن بأن الجودة والالتزام هما أساس النجاح المستدام، ولذلك نحرص على بناء علاقات طويلة الأمد تعتمد على الثقة والاحترافية المطلقة.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- قسم الرؤية والرسالة -->
+    <section class="section-padding" style="background-color: var(--card-bg);">
+        <div class="container">
+            <div class="grid">
+                <div class="card">
+                    <h3>رؤيتنا</h3>
+                    <p>أن نكون الشريك التقني الأول والموثوق للشركات الباحثة عن الابتكار والريادة في الشرق الأوسط.</p>
+                </div>
+                <div class="card">
+                    <h3>رسالتنا</h3>
+                    <p>تقديم حلول برمجية عالية الأداء، قابلة للتطوير، وتلبي احتياجات السوق بدقة واحترافية.</p>
+                </div>
+                <div class="card">
+                    <h3>قيمنا</h3>
+                    <p>الشفافية المطلقة، الالتزام بالمعايير العالمية، التركيز على تحقيق أهداف العميل.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- الفوتر الرسمي -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-bottom">
-                <p>كوردا معكم لحياة أفضل 🌙</p>
+            <div class="footer-content">
+                <p>&copy; 2026 Korda. جميع الحقوق محفوظة.</p>
+                <div class="footer-links">
+                    <a href="privacy.html">سياسة الخصوصية</a>
+                    <a href="terms.html">الشروط والأحكام</a>
+                </div>
             </div>
         </div>
     </footer>
-
-    <!-- سكريبت جلب الهيدر وتشغيل الوضع الليلي -->
-    <script>
-        fetch('header.html')
-            .then(response => response.text())
-            .then(data => {
-                // وضع الهيدر داخل الحاوية الفارغة
-                document.getElementById('header-container').innerHTML = data;
-
-                // تفعيل زر الوضع الليلي بعد تحميل الهيدر
-                const themeToggleBtn = document.getElementById('theme-toggle');
-                const body = document.body;
-                
-                themeToggleBtn.addEventListener('click', () => {
-                    const currentTheme = body.getAttribute('data-theme');
-                    if (currentTheme === 'dark') {
-                        body.removeAttribute('data-theme');
-                        themeToggleBtn.textContent = '🌙';
-                    } else {
-                        body.setAttribute('data-theme', 'dark');
-                        themeToggleBtn.textContent = '☀️';
-                    }
-                });
-            })
-            .catch(error => console.error('Error loading header:', error));
-    </script>
 
 </body>
 </html>
