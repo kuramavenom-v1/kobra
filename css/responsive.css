@@ -1,0 +1,14 @@
+/* شاشات الأجهزة اللوحية والموبايل */
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .hero h1 { font-size: 32px; }
+    .hero .buttons { flex-direction: column; }
+    .grid { grid-template-columns: 1fr; }
+}

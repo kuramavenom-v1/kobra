@@ -1,0 +1,228 @@
+/* =========================================
+   إعدادات عامة (Global Settings)
+========================================= */
+:root {
+    --primary: #2563eb;
+    --secondary: #0f172a;
+    --light-bg: #f8fafc;
+    --text-main: #334155;
+    --white: #ffffff;
+    --border: #e2e8f0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-main);
+    background-color: var(--white);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
+
+ul {
+    list-style: none;
+}
+
+/* الأزرار (Buttons) */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.btn-primary { background: var(--primary); color: var(--white); }
+.btn-primary:hover { background: #1d4ed8; }
+.btn-outline { border: 2px solid var(--white); color: var(--white); }
+.btn-outline:hover { background: var(--white); color: var(--primary); }
+
+/* العناوين (Section Titles) */
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: var(--secondary);
+}
+
+.section-padding { padding: 80px 0; }
+.bg-light { background-color: var(--light-bg); }
+
+/* =========================================
+   الرأس وقائمة التنقل (Header)
+========================================= */
+.header {
+    background: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: var(--secondary);
+}
+.logo span { color: var(--primary); }
+
+.nav ul {
+    display: flex;
+    gap: 20px;
+}
+.nav a:hover { color: var(--primary); }
+
+/* =========================================
+   قسم Hero
+========================================= */
+.hero {
+    background: var(--secondary);
+    color: var(--white);
+    padding: 100px 0;
+    text-align: center;
+}
+.hero h1 { font-size: 48px; margin-bottom: 20px; }
+.hero p { font-size: 18px; margin-bottom: 30px; color: #cbd5e1; }
+.hero .buttons { display: flex; justify-content: center; gap: 15px; }
+
+/* =========================================
+   الشبكات والبطاقات (Grids & Cards)
+========================================= */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+}
+.card h3 { color: var(--primary); margin-bottom: 15px; }
+
+/* إحصائيات الشركة */
+.stats {
+    background: var(--primary);
+    color: var(--white);
+    text-align: center;
+}
+.stat-box h3 { font-size: 36px; margin-bottom: 10px; }
+
+/* =========================================
+   عنوان الصفحات الداخلية (Page Banner)
+========================================= */
+.page-banner {
+    background: var(--light-bg);
+    padding: 60px 0;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+}
+.page-banner h1 { color: var(--secondary); font-size: 36px; }
+
+/* =========================================
+   الفوتر (Footer)
+========================================= */
+.footer {
+    background: var(--secondary);
+    color: var(--white);
+    padding: 60px 0 20px;
+}
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+.footer-bottom { text-align: center; padding-top: 20px; border-top: 1px solid #334155; color: #cbd5e1; }
+/* =========================================
+   تنسيقات الصور والبطاقات (Images & Cards)
+========================================= */
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.team-card {
+    text-align: center;
+}
+.team-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    border: 3px solid var(--primary);
+}
+
+/* =========================================
+   تخطيط صفحة التفاصيل (Details Layout)
+========================================= */
+.details-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+.main-content {
+    flex: 2;
+    min-width: 300px;
+}
+.sidebar {
+    flex: 1;
+    min-width: 300px;
+    background: var(--light-bg);
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+}
+
+/* =========================================
+   النماذج (Forms)
+========================================= */
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--secondary);
+}
+.form-control {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 16px;
+}
+.form-control:focus {
+    outline: none;
+    border-color: var(--primary);
+}

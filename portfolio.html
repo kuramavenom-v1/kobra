@@ -1,522 +1,79 @@
-<!DOCTYPE html>
-
-<html lang="en">
-
+!DOCTYPE html>
+<html lang="ar" dir="rtl">
 <head>
-
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
-
-    <title>Portfolio | Korda</title>
-
-    <link rel="stylesheet"
-        href="assets/css/portfolio.css">
-
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korda | أعمالنا</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
-
 <body>
 
-    <!-- =========================
-            Header
-    ========================== -->
-
-    <header class="navbar">
-
+    <!-- Header -->
+    <header class="header">
         <div class="container">
-
-            <a href="index.html"
-                class="logo">
-
-                Korda
-
-            </a>
-
-            <nav>
-
-                <ul class="nav-links">
-
-                    <li><a href="index.html">Home</a></li>
-
-                    <li><a href="about.html">About</a></li>
-
-                    <li><a href="services.html">Services</a></li>
-
-                    <li><a href="portfolio.html" class="active">Portfolio</a></li>
-
-                    <li><a href="team.html">Team</a></li>
-
-                    <li><a href="contact.html">Contact</a></li>
-
+            <a href="index.html" class="logo">Korda<span>.</span></a>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="services.html">الخدمات</a></li>
+                    <li><a href="portfolio.html">الأعمال</a></li>
+                    <li><a href="team.html">الفريق</a></li>
                 </ul>
-
             </nav>
-
+            <a href="service-details.html" class="btn btn-primary">تواصل معنا</a>
         </div>
-
     </header>
 
-    <!-- =========================
-            Banner
-    ========================== -->
-
-    <section class="page-banner">
-
+    <!-- Page Banner -->
+    <div class="page-banner">
         <div class="container">
-
-            <h1>
-
-                Our Portfolio
-
-            </h1>
-
-            <p>
-
-                Explore a selection of successful projects delivered by
-                Korda for businesses across different industries.
-
-            </p>
-
+            <h1>أعمالنا ومشاريعنا</h1>
+            <p>نفخر بما أنجزناه لعملائنا في مختلف القطاعات</p>
         </div>
+    </div>
 
+    <!-- Portfolio Grid -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="grid">
+                <!-- المشروع 1 -->
+                <div class="card">
+                    <div style="background: #e2e8f0; height: 200px; border-radius: 6px; margin-bottom: 15px; display: flex; align-items: center; justify-content: center; color: #94a3b8;">المشروع 1</div>
+                    <h3>منصة تعليمية إلكترونية</h3>
+                    <p>برمجة وتطوير منصة متكاملة للتعليم عن بعد مع نظام إدارة التعلم (LMS).</p>
+                    <br>
+                    <span style="color: var(--primary); font-size: 14px; font-weight: bold;">تطوير الويب</span>
+                </div>
+                <!-- المشروع 2 -->
+                <div class="card">
+                    <div style="background: #e2e8f0; height: 200px; border-radius: 6px; margin-bottom: 15px; display: flex; align-items: center; justify-content: center; color: #94a3b8;">المشروع 2</div>
+                    <h3>تطبيق توصيل طلبات</h3>
+                    <p>تطبيق جوال يربط بين المتاجر والعملاء والمندوبين بتجربة مستخدم سلسة.</p>
+                    <br>
+                    <span style="color: var(--primary); font-size: 14px; font-weight: bold;">تطبيقات الجوال</span>
+                </div>
+                <!-- المشروع 3 -->
+                <div class="card">
+                    <div style="background: #e2e8f0; height: 200px; border-radius: 6px; margin-bottom: 15px; display: flex; align-items: center; justify-content: center; color: #94a3b8;">المشروع 3</div>
+                    <h3>هوية بصرية لشركة عقارية</h3>
+                    <p>تصميم شعار وهوية بصرية كاملة تعكس الفخامة والثقة لشركة تطوير عقاري.</p>
+                    <br>
+                    <span style="color: var(--primary); font-size: 14px; font-weight: bold;">الهوية التجارية</span>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <main>
-
-        <!-- =========================
-                Portfolio Intro
-        ========================== -->
-
-        <section class="portfolio-intro">
-
-            <div class="container">
-
-                <div class="section-title">
-
-                    <h2>
-
-                        Latest Projects
-
-                    </h2>
-
-                    <p>
-
-                        We build modern digital products focused on
-                        performance, creativity and business growth.
-
-                    </p>
-
-                </div>
-
-                <div class="portfolio-filter">
-
-                    <button class="active">
-
-                        All
-
-                    </button>
-
-                    <button>
-
-                        Web Design
-
-                    </button>
-
-                    <button>
-
-                        Development
-
-                    </button>
-
-                    <button>
-
-                        Branding
-
-                    </button>
-
-                    <button>
-
-                        Marketing
-
-                    </button>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- =========================
-                Portfolio Grid
-        ========================== -->
-
-        <section class="portfolio">
-
-            <div class="container">
-
-                <div class="portfolio-grid">
-
-                    <div class="project-card">
-
-                        <img src="assets/images/portfolio/project1.jpg"
-                            alt="Corporate Website">
-
-                        <div class="project-content">
-
-                            <span>
-
-                                Web Design
-
-                            </span>
-
-                            <h3>
-
-                                Corporate Website
-
-                            </h3>
-
-                            <p>
-
-                                Modern responsive website designed for
-                                business companies.
-
-                            </p>
-
-                            <a href="project-details.html"
-                                class="btn">
-
-                                View Project
-
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                    <div class="project-card">
-
-                        <img src="assets/images/portfolio/project2.jpg"
-                            alt="E-Commerce">
-
-                        <div class="project-content">
-
-                            <span>
-
-                                Development
-
-                            </span>
-
-                            <h3>
-
-                                E-Commerce Platform
-
-                            </h3>
-
-                            <p>
-
-                                Complete online shopping solution with
-                                secure payment integration.
-
-                            </p>
-
-                            <a href="project-details.html"
-                                class="btn">
-
-                                View Project
-
-                            </a>
-
-                        </div>
-
-                    </div>
-                                        <div class="project-card">
-
-                        <img src="assets/images/portfolio/project3.jpg"
-                            alt="Brand Identity">
-
-                        <div class="project-content">
-
-                            <span>
-
-                                Branding
-
-                            </span>
-
-                            <h3>
-
-                                Brand Identity
-
-                            </h3>
-
-                            <p>
-
-                                Complete branding package including
-                                logo, typography and visual identity.
-
-                            </p>
-
-                            <a href="project-details.html"
-                                class="btn">
-
-                                View Project
-
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                    <div class="project-card">
-
-                        <img src="assets/images/portfolio/project4.jpg"
-                            alt="Marketing Campaign">
-
-                        <div class="project-content">
-
-                            <span>
-
-                                Marketing
-
-                            </span>
-
-                            <h3>
-
-                                Digital Campaign
-
-                            </h3>
-
-                            <p>
-
-                                High-converting digital marketing
-                                campaign with measurable results.
-
-                            </p>
-
-                            <a href="project-details.html"
-                                class="btn">
-
-                                View Project
-
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                    <div class="project-card">
-
-                        <img src="assets/images/portfolio/project5.jpg"
-                            alt="Dashboard">
-
-                        <div class="project-content">
-
-                            <span>
-
-                                Development
-
-                            </span>
-
-                            <h3>
-
-                                Business Dashboard
-
-                            </h3>
-
-                            <p>
-
-                                Powerful analytics dashboard built for
-                                enterprise management.
-
-                            </p>
-
-                            <a href="project-details.html"
-                                class="btn">
-
-                                View Project
-
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                    <div class="project-card">
-
-                        <img src="assets/images/portfolio/project6.jpg"
-                            alt="Mobile App">
-
-                        <div class="project-content">
-
-                            <span>
-
-                                Mobile App
-
-                            </span>
-
-                            <h3>
-
-                                Finance Application
-
-                            </h3>
-
-                            <p>
-
-                                Mobile banking application with modern
-                                UI and secure authentication.
-
-                            </p>
-
-                            <a href="project-details.html"
-                                class="btn">
-
-                                View Project
-
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- =========================
-                Statistics
-        ========================== -->
-
-        <section class="portfolio-stats">
-
-            <div class="container">
-
-                <div class="stats-grid">
-
-                    <div class="stat-card">
-
-                        <h2>
-
-                            250+
-
-                        </h2>
-
-                        <p>
-
-                            Completed Projects
-
-                        </p>
-
-                    </div>
-
-                    <div class="stat-card">
-
-                        <h2>
-
-                            120+
-
-                        </h2>
-
-                        <p>
-
-                            Happy Clients
-
-                        </p>
-
-                    </div>
-
-                    <div class="stat-card">
-
-                        <h2>
-
-                            15+
-
-                        </h2>
-
-                        <p>
-
-                            Years Experience
-
-                        </p>
-
-                    </div>
-
-                    <div class="stat-card">
-
-                        <h2>
-
-                            98%
-
-                        </h2>
-
-                        <p>
-
-                            Client Satisfaction
-
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-                <!-- =========================
-                CTA
-        ========================== -->
-
-        <section class="cta">
-
-            <div class="container">
-
-                <h2>
-
-                    Ready To Build Your Next Project?
-
-                </h2>
-
-                <p>
-
-                    At Korda, we transform ideas into innovative digital
-                    solutions that help businesses grow and succeed.
-
-                </p>
-
-                <a href="contact.html" class="btn">
-
-                    Contact Us
-
-                </a>
-
-            </div>
-
-        </section>
-
-    </main>
-
-    <!-- =========================
-            Footer
-    ========================== -->
-
-    <footer>
-
+    <!-- Footer -->
+    <footer class="footer">
         <div class="container">
-
-            <p>
-
-                © 2025 Korda. All Rights Reserved.
-
-            </p>
-
+            <div class="footer-bottom">
+                <p>كوردا معكم ل حياه افضل 🌙</p>
+            </div>
         </div>
-
     </footer>
 
 </body>
-
 </html>
