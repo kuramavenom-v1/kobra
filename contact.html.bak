@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korda | اتصل بنا</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- الهيدر الاحترافي -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">Korda</a>
+            
+            <!-- روابط سطح المكتب العادية -->
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">الرئيسية</a>
+                <a href="about.html" class="nav-link">من نحن</a>
+                <a href="services.html" class="nav-link">الخدمات</a>
+                <a href="portfolio.html" class="nav-link">الأعمال</a>
+                <a href="team.html" class="nav-link">الفريق</a>
+                <a href="contact.html" class="nav-link active">اتصل بنا</a>
+            </nav>
+
+            <div class="header-controls">
+                <a href="contact.html" class="btn-primary" style="display: none; @media(min-width: 768px){display:inline-block;}">تواصل معنا</a>
+                
+                <!-- زر القائمة الجانبية للجوال -->
+                <button class="menu-toggle" id="openMenuBtn">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- القائمة الجانبية المنبثقة للجوال (Drawer) -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div>
+            <div class="mobile-menu-header">
+                <a href="index.html" class="logo" style="font-size: 20px;">Korda</a>
+                <button class="close-menu" id="closeMenuBtn">&times;</button>
+            </div>
+            
+            <ul class="mobile-nav-links">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="services.html">خدماتنا</a></li>
+                <li><a href="portfolio.html">أعمالنا</a></li>
+                <li><a href="team.html">فريق العمل</a></li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+            </ul>
+        </div>
+
+        <div class="mobile-footer-info">
+            <div class="mobile-contact-item">📞 0501861968</div>
+            <div class="mobile-contact-item">✉️ info@korda.com</div>
+            <div class="mobile-socials">
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#">tiktok</a>
+                <a href="#"></a>
+            </div>
+            <a href="contact.html" class="btn-primary" style="text-align: center; margin-top: 10px;">طلب خدمة</a>
+        </div>
+    </div>
+
+    <!-- سكريبت تشغيل وإغلاق القائمة -->
+    <script>
+        const openMenuBtn = document.getElementById('openMenuBtn');
+        const closeMenuBtn = document.getElementById('closeMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        openMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+        });
+
+        closeMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+        });
+    </script>
+
+    <!-- بانر الصفحة -->
+    <section class="page-banner">
+        <div class="container">
+            <h1>تواصل معنا</h1>
+            <p>نحن هنا للإجابة على استفساراتك ومناقشة مشروعك القادم</p>
+        </div>
+    </section>
+
+    <!-- محتوى صفحة الاتصال -->
+    <section class="section-padding">
+        <div class="container">
+            <div style="max-width: 600px; margin: 0 auto; background: var(--card-bg); padding: 40px; border-radius: 8px; border: 1px solid var(--border);">
+                <h2 style="font-size: 24px; margin-bottom: 25px; text-align: center;">أرسل لنا رسالة</h2>
+                <form action="#" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
+                    <div>
+                        <label style="display: block; margin-bottom: 8px; font-size: 14px; opacity: 0.8;">الاسم الكريم</label>
+                        <input type="text" placeholder="أدخل اسمك" style="width: 100%; padding: 12px; background: var(--bg-color); border: 1px solid var(--border); border-radius: 4px; color: #fff;">
+                    </div>
+                    <div>
+                        <label style="display: block; margin-bottom: 8px; font-size: 14px; opacity: 0.8;">البريد الإلكتروني</label>
+                        <input type="email" placeholder="name@example.com" style="width: 100%; padding: 12px; background: var(--bg-color); border: 1px solid var(--border); border-radius: 4px; color: #fff;">
+                    </div>
+                    <div>
+                        <label style="display: block; margin-bottom: 8px; font-size: 14px; opacity: 0.8;">الرسالة</label>
+                        <textarea rows="5" placeholder="اكتب تفاصيل مشروعك أو استفسارك هنا..." style="width: 100%; padding: 12px; background: var(--bg-color); border: 1px solid var(--border); border-radius: 4px; color: #fff; resize: vertical;"></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary" style="width: 100%; cursor: pointer; border: none; padding: 14px; font-size: 16px;">إرسال الرسالة</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- الفوتر الرسمي -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Korda. جميع الحقوق محفوظة.</p>
+                <div class="footer-links">
+                    <a href="privacy.html">سياسة الخصوصية</a>
+                    <a href="terms.html">الشروط والأحكام</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
