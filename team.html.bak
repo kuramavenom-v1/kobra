@@ -8,23 +8,74 @@
 </head>
 <body>
 
-    <!-- الهيدر الاحترافي -->
-    <header class="header">
-        <div class="container">
-            <a href="index.html" class="logo">Korda</a>
-            <nav class="nav-links">
-                <a href="index.html" class="nav-link">الرئيسية</a>
-                <a href="about.html" class="nav-link">من نحن</a>
-                <a href="services.html" class="nav-link">الخدمات</a>
-                <a href="portfolio.html" class="nav-link">الأعمال</a>
-                <a href="team.html" class="nav-link active">الفريق</a>
-            </nav>
-            <div class="header-controls">
-                <a href="index-en.html" class="btn-lang">EN</a>
-                <a href="services.html" class="btn-primary">تواصل معنا</a>
-            </div>
+<!-- الهيدر الاحترافي -->
+<header class="header">
+    <div class="container">
+        <a href="index.html" class="logo">Korda</a>
+        
+        <!-- روابط سطح المكتب العادية -->
+        <nav class="nav-links">
+            <a href="index.html" class="nav-link">الرئيسية</a>
+            <a href="about.html" class="nav-link">من نحن</a>
+            <a href="services.html" class="nav-link">الخدمات</a>
+            <a href="portfolio.html" class="nav-link">الأعمال</a>
+            <a href="team.html" class="nav-link">الفريق</a>
+        </nav>
+
+        <div class="header-controls">
+            <a href="services.html" class="btn-primary" style="display: none; @media(min-width: 768px){display:inline-block;}">تواصل معنا</a>
+            
+            <!-- زر القائمة الجانبية للجوال -->
+            <button class="menu-toggle" id="openMenuBtn">☰</button>
         </div>
-    </header>
+    </div>
+</header>
+
+<!-- القائمة الجانبية المنبثقة للجوال (Drawer) -->
+<div class="mobile-menu" id="mobileMenu">
+    <div>
+        <div class="mobile-menu-header">
+            <a href="index.html" class="logo" style="font-size: 20px;">Korda</a>
+            <button class="close-menu" id="closeMenuBtn">&times;</button>
+        </div>
+        
+        <ul class="mobile-nav-links">
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="about.html">من نحن</a></li>
+            <li><a href="services.html">خدماتنا</a></li>
+            <li><a href="portfolio.html">أعمالنا</a></li>
+            <li><a href="team.html">فريق العمل</a></li>
+            <li><a href="services.html">اتصل بنا</a></li>
+        </ul>
+    </div>
+
+    <div class="mobile-footer-info">
+        <div class="mobile-contact-item">📞 0501861968</div>
+        <div class="mobile-contact-item">✉️ info@korda.com</div>
+        <div class="mobile-socials">
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#">tiktok</a>
+            <a href="#"></a>
+        </div>
+        <a href="services.html" class="btn-primary" style="text-align: center; margin-top: 10px;">طلب خدمة</a>
+    </div>
+</div>
+
+<!-- سكريبت تشغيل وإغلاق القائمة -->
+<script>
+    const openMenuBtn = document.getElementById('openMenuBtn');
+    const closeMenuBtn = document.getElementById('closeMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    openMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.add('active');
+    });
+
+    closeMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+    });
+</script>
 
     <!-- بانر الصفحة -->
     <section class="page-banner">
