@@ -5,51 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Korda | من نحن</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* ستايل بانر من نحن مع خلفية صورة والنص العائم فوقها */
+        .about-banner-box {
+            position: relative;
+            width: 100%;
+            max-width: 1100px;
+            margin: 40px auto 30px;
+            height: 380px; /* ارتفاع بانر من نحن */
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-image: url('images/about-hero.jpg'); /* مسار صورة بانر من نحن */
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* طبقة تغشية سوداء شفافة فوق الصورة لزيادة وضوح النصوص وفخامتها */
+        .about-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(5, 5, 5, 0.75); /* درجة العتمة السوداء */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
 
-   <!-- الهيدر الاحترافي -->
-<header class="header">
-    <div class="container">
-        <a href="index.html" class="logo">☂ Kobra</a>
-        
-        <!-- روابط سطح المكتب العادية -->
-        <nav class="nav-links">
-            <a href="index.html" class="nav-link">الرئيسية</a>
-            <a href="about.html" class="nav-link">من نحن</a>
-            <a href="services.html" class="nav-link">الخدمات</a>
-            <a href="portfolio.html" class="nav-link">الأعمال</a>
-            <a href="team.html" class="nav-link">الفريق</a>
-        </nav>
-
-        <div class="header-controls">
-            <a href="services.html" class="btn-primary" style="display: none; @media(min-width: 768px){display:inline-block;}">تواصل معنا</a>
+    <!-- الهيدر الاحترافي -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">Korda</a>
             
-            <!-- زر القائمة الجانبية للجوال -->
-            <button class="menu-toggle" id="openMenuBtn">☰</button>
-        </div>
-    </div>
-</header>
+            <!-- روابط سطح المكتب العادية -->
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">الرئيسية</a>
+                <a href="about.html" class="nav-link active">من نحن</a>
+                <a href="services.html" class="nav-link">الخدمات</a>
+                <a href="portfolio.html" class="nav-link">الأعمال</a>
+                <a href="team.html" class="nav-link">الفريق</a>
+                <a href="contact.html" class="nav-link">اتصل بنا</a>
+            </nav>
 
-<!-- القائمة الجانبية المنبثقة للجوال (Drawer) -->
-<div class="mobile-menu" id="mobileMenu">
-    <div>
-        <div class="mobile-menu-header">
-            <a href="index.html" class="logo" style="font-size: 20px;">Korda</a>
-            <button class="close-menu" id="closeMenuBtn">&times;</button>
+            <div class="header-controls">
+                <a href="contact.html" class="btn-primary" style="display: none; @media(min-width: 768px){display:inline-block;}">تواصل معنا</a>
+                
+                <!-- زر القائمة الجانبية للجوال -->
+                <button class="menu-toggle" id="openMenuBtn">☰</button>
+            </div>
         </div>
-        
-        <ul class="mobile-nav-links">
-            <li><a href="index.html">الرئيسية</a></li>
-            <li><a href="about.html">من نحن</a></li>
-            <li><a href="services.html">خدماتنا</a></li>
-            <li><a href="portfolio.html">أعمالنا</a></li>
-            <li><a href="team.html">فريق العمل</a></li>
-            <li><a href="services.html">اتصل بنا</a></li>
-        </ul>
-    </div>
+    </header>
 
-        <div class="mobile-footer-info">
+    <!-- القائمة الجانبية المنبثقة للجوال (Drawer) -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div>
+            <div class="mobile-menu-header">
+                <a href="index.html" class="logo" style="font-size: 20px;">Korda</a>
+                <button class="close-menu" id="closeMenuBtn">&times;</button>
+            </div>
+            
+            <ul class="mobile-nav-links">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="services.html">خدماتنا</a></li>
+                <li><a href="portfolio.html">أعمالنا</a></li>
+                <li><a href="team.html">فريق العمل</a></li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+            </ul>
+        </div>
+
+          <div class="mobile-footer-info">
         <div class="mobile-contact-item">📞 +966553910586</div>
         <div class="mobile-contact-item">✉️ info@korda.com</div>
         <div class="mobile-socials">
@@ -58,61 +94,61 @@
             <a href="#">T</a>
             <a href="#">A</a>
         </div>
-        <a href="services.html" class="btn-primary" style="text-align: center; margin-top: 10px;">طلب خدمة</a>
-    </div>
-</div>
-
-<!-- سكريبت تشغيل وإغلاق القائمة -->
-<script>
-    const openMenuBtn = document.getElementById('openMenuBtn');
-    const closeMenuBtn = document.getElementById('closeMenuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-
-    openMenuBtn.addEventListener('click', () => {
-        mobileMenu.classList.add('active');
-    });
-
-    closeMenuBtn.addEventListener('click', () => {
-        mobileMenu.classList.remove('active');
-    });
-</script>
-
-    <!-- بانر الصفحة -->
-    <section class="page-banner">
-        <div class="container">
-            <h1>من نحن</h1>
-            <p>تعرف على قصتنا ورؤيتنا في قيادة التحول الرقمي</p>
+            <a href="contact.html" class="btn-primary" style="text-align: center; margin-top: 10px;">طلب خدمة</a>
         </div>
-    </section>
+    </div>
 
-    <!-- محتوى صفحة من نحن -->
-    <section class="section-padding">
+    <!-- سكريبت تشغيل وإغلاق القائمة -->
+    <script>
+        const openMenuBtn = document.getElementById('openMenuBtn');
+        const closeMenuBtn = document.getElementById('closeMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        openMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+        });
+
+        closeMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+        });
+    </script>
+
+    <!-- بانر من نحن مع صورة خلفية والنصوص عائمة فوقها -->
+    <section>
         <div class="container">
-            <div class="about-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; align-items: center;">
-                <div>
-                    <img src="images/about/company-overview.jpg" alt="مكتب شركة Korda" style="width: 100%; border-radius: 8px; border: 1px solid var(--border);">
-                </div>
-                <div>
-                    <h2 style="font-size: 28px; margin-bottom: 20px;">نحن وكالة تقنية متكاملة</h2>
-                    <p style="opacity: 0.8; margin-bottom: 15px; line-height: 1.8;">بدأت Korda كفكرة طموحة لتمكين الشركات من الدخول إلى العالم الرقمي بقوة وثبات. نجمع بين الإبداع البرمجي والتصميم العصري لنقدم حلولاً تُحدث فارقاً حقيقياً في أعمال عملائنا.</p>
-                    <p style="opacity: 0.8; line-height: 1.8;">نؤمن بأن الجودة والالتزام هما أساس النجاح المستدام، ولذلك نحرص على بناء علاقات طويلة الأمد تعتمد على الثقة والاحترافية المطلقة.</p>
+            <div class="about-banner-box">
+                <div class="about-overlay">
+                    <h1 style="font-size: 38px; margin-bottom: 12px; font-weight: 700;">من نحن</h1>
+                    <p style="font-size: 16px; opacity: 0.8; max-width: 600px;">تعرف على قصة Korda ورؤيتنا في قيادة التحول الرقمي باحترافية تامة.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- قسم الرؤية والرسالة -->
-    <section class="section-padding" style="background-color: var(--card-bg);">
+    <!-- محتوى صفحة من نحن (الرؤية، الرسالة، القيمة) -->
+    <section class="section-padding" style="padding-top: 30px;">
         <div class="container">
             <div class="grid">
+                <!-- بطاقة من نحن الرئيسية -->
+                <div class="card" style="grid-column: span 2;">
+                    <h3>نحن وكالة تقنية متكاملة</h3>
+                    <p style="margin-bottom: 15px;">بدأت Korda كفكرة طموحة لتمكين الشركات من الدخول إلى العالم الرقمي بقوة وثبات. نجمع بين الإبداع البرمجي والتصميم العصري لنقدم حلولاً تحدث فارقاً حقيقياً في أعمال عملائنا.</p>
+                    <p>نؤمن بأن الجودة والالتزام هما أساس النجاح المستدام، ولذلك نحرص على بناء علاقات طويلة الأمد تعتمد على الثقة والاحترافية المطلقة.</p>
+                </div>
+
+                <!-- بطاقة رؤيتنا -->
                 <div class="card">
                     <h3>رؤيتنا</h3>
-                    <p>أن نكون الشريك التقني الأول والموثوق للشركات الباحثة عن الابتكار والريادة في الشرق الأوسط.</p>
+                    <p>أن نكون الشريك التقني الأول والموثوق للشركات الباحثحة عن الابتكار والريادة في الشرق الأوسط.</p>
                 </div>
+
+                <!-- بطاقة رسالتنا -->
                 <div class="card">
                     <h3>رسالتنا</h3>
-                    <p>تقديم حلول برمجية عالية الأداء، قابلة للتطوير، وتلبي احتياجات السوق بدقة واحترافية.</p>
+                    <p>تقديم حلول برمجية عالية الأداء قابلة للتطوير، وتلبي احتياجات السوق بدقة واحترافية.</p>
                 </div>
+
+                <!-- بطاقة قيمنا -->
                 <div class="card">
                     <h3>قيمنا</h3>
                     <p>الشفافية المطلقة، الالتزام بالمعايير العالمية، التركيز على تحقيق أهداف العميل.</p>
