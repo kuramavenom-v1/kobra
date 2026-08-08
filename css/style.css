@@ -277,3 +277,12 @@ body {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 }
+/* تثبيت لون النصوص الموجودة داخل طبقة العتمة للصور لتكون بيضاء دائماً */
+.about-overlay *, 
+.hero-overlay *, 
+.about-overlay h1, 
+.about-overlay p,
+.hero-content h1, 
+.hero-content p {
+    color: #ffffff !important;
+}

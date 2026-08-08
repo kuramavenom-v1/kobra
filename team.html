@@ -133,33 +133,30 @@
         </div>
     </footer>
 
-    <!-- سكريبت الوضع الليلي / النهاري -->
+    <!-- سكريبت الوضع الليلي / النهاري المحدث والمصحح -->
     <script>
-        const themeToggleBtn = document.getElementById('themeToggleBtn');
-        const currentTheme = localStorage.getItem('theme') || 'dark';
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeToggleBtn = document.getElementById('themeToggleBtn');
+            const currentTheme = localStorage.getItem('theme') || 'dark';
 
-        if (currentTheme === 'light') {
-            document.documentElement.setAttribute('data-theme', 'light');
-            if (themeToggleBtn) themeToggleBtn.textContent = '☀️';
-        } else {
-            document.documentElement.setAttribute('data-theme', 'dark');
-            if (themeToggleBtn) themeToggleBtn.textContent = '🌙';
-        }
+            document.documentElement.setAttribute('data-theme', currentTheme);
+            if (themeToggleBtn) {
+                themeToggleBtn.textContent = currentTheme === 'light' ? '☀️' : '🌙';
 
-        if (themeToggleBtn) {
-            themeToggleBtn.addEventListener('click', () => {
-                let theme = document.documentElement.setAttribute('data-theme');
-                if (theme === 'light') {
-                    document.documentElement.setAttribute('data-theme', 'dark');
-                    localStorage.setItem('theme', 'dark');
-                    themeToggleBtn.textContent = '🌙';
-                } else {
-                    document.documentElement.setAttribute('data-theme', 'light');
-                    localStorage.setItem('theme', 'light');
-                    themeToggleBtn.textContent = '☀️';
-                }
-            });
-        }
+                themeToggleBtn.addEventListener('click', () => {
+                    let theme = document.documentElement.getAttribute('data-theme');
+                    if (theme === 'light') {
+                        document.documentElement.setAttribute('data-theme', 'dark');
+                        localStorage.setItem('theme', 'dark');
+                        themeToggleBtn.textContent = '🌙';
+                    } else {
+                        document.documentElement.setAttribute('data-theme', 'light');
+                        localStorage.setItem('theme', 'light');
+                        themeToggleBtn.textContent = '☀️';
+                    }
+                });
+            }
+        });
     </script>
 
 </body>
