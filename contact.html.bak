@@ -100,7 +100,7 @@
                     <input type="hidden" name="access_key" value="ضع_مفتاحك_هنا">
 
                     <div>
-                        <label style="display: block; margin-bottom: 8px; font-size: 14px; opacity: 0.8;">الاسم الكريم</label>
+                        <label style="display: block; margin-bottom: 8px; font-size: 14px; opacity: 0.8;">الاسم الثنائي</label>
                         <input type="text" name="name" placeholder="أدخل اسمك" required style="width: 100%; padding: 12px; background: var(--bg-color); border: 1px solid var(--border); border-radius: 4px; color: var(--text-color);">
                     </div>
                     
