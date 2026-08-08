@@ -59,6 +59,9 @@
             </nav>
 
             <div class="header-controls">
+                <!-- زر الوضع الليلي/النهاري -->
+                <button class="theme-toggle-btn" id="themeToggleBtn" title="تغيير الوضع">🌙</button>
+
                 <a href="contact.html" class="btn-primary" style="display: none; @media(min-width: 768px){display:inline-block;}">تواصل معنا</a>
                 
                 <!-- زر القائمة الجانبية للجوال -->
@@ -85,15 +88,15 @@
             </ul>
         </div>
 
-          <div class="mobile-footer-info">
-        <div class="mobile-contact-item">📞 +966553910586</div>
-        <div class="mobile-contact-item">✉️ info@korda.com</div>
-        <div class="mobile-socials">
-            <a href="#">G</a>
-            <a href="#">W</a>
-            <a href="#">T</a>
-            <a href="#">A</a>
-        </div>
+        <div class="mobile-footer-info">
+            <div class="mobile-contact-item">📞 +966553910586</div>
+            <div class="mobile-contact-item">✉️ info@korda.com</div>
+            <div class="mobile-socials">
+                <a href="#">G</a>
+                <a href="#">W</a>
+                <a href="#">T</a>
+                <a href="#">A</a>
+            </div>
             <a href="contact.html" class="btn-primary" style="text-align: center; margin-top: 10px;">طلب خدمات</a>
         </div>
     </div>
@@ -132,7 +135,7 @@
                 <!-- بطاقة من نحن الرئيسية -->
                 <div class="card" style="grid-column: span 2;">
                     <h3>نحن وكالة تقنية متكاملة</h3>
-                    <p style="margin-bottom: 15px;">بدأت Korda كفكرة طموحة لتمكين الشركات من الدخول إلى العالم الرقمي بقوة وثبات. نجمع بين الإبداع البرمجي والتصميم العصري لنقدم حلولاً تحدث فارقاً حقيقياً في أعمال عملائنا.</p> 
+                    <p style="margin-bottom: 15px; padding: 0 25px;">بدأت Korda كفكرة طموحة لتمكين الشركات من الدخول إلى العالم الرقمي بقوة وثبات. نجمع بين الإبداع البرمجي والتصميم العصري لنقدم حلولاً تحدث فارقاً حقيقياً في أعمال عملائنا.</p> 
                 </div>
 
                 <!-- بطاقة رؤيتنا -->
@@ -140,8 +143,6 @@
                     <h3>رؤيتنا</h3>
                     <p>أن نكون الشريك التقني الأول والموثوق للشركات الباحثحة عن الابتكار والريادة في الشرق الأوسط.</p>
                 </div>
-
-                
 
                 <!-- بطاقة قيمنا -->
                 <div class="card">
@@ -164,34 +165,35 @@
             </div>
         </div>
     </footer>
-<script>
-    const themeToggleBtn = document.getElementById('themeToggleBtn');
-    const currentTheme = localStorage.getItem('theme') || 'dark';
 
-    // تطبيق الثيم المحفوظ مسبقاً عند تحميل الصفحة
-    if (currentTheme === 'light') {
-        document.documentElement.setAttribute('data-theme', 'light');
-        themeToggleBtn.textContent = '☀️';
-    } else {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        themeToggleBtn.textContent = '🌙';
-    }
+    <!-- سكريبت الوضع الليلي / النهاري -->
+    <script>
+        const themeToggleBtn = document.getElementById('themeToggleBtn');
+        const currentTheme = localStorage.getItem('theme') || 'dark';
 
-    // التبديل عند الضغط على الزر
-    themeToggleBtn.addEventListener('click', () => {
-        let theme = document.documentElement.getAttribute('data-theme');
-        
-        if (theme === 'light') {
-            document.documentElement.setAttribute('data-theme', 'dark');
-            localStorage.setItem('theme', 'dark');
-            themeToggleBtn.textContent = '🌙';
-        } else {
+        if (currentTheme === 'light') {
             document.documentElement.setAttribute('data-theme', 'light');
-            localStorage.setItem('theme', 'light');
-            themeToggleBtn.textContent = '☀️';
+            if (themeToggleBtn) themeToggleBtn.textContent = '☀️';
+        } else {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            if (themeToggleBtn) themeToggleBtn.textContent = '🌙';
         }
-    });
-</script>
+
+        if (themeToggleBtn) {
+            themeToggleBtn.addEventListener('click', () => {
+                let theme = document.documentElement.getAttribute('data-theme');
+                if (theme === 'light') {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    localStorage.setItem('theme', 'dark');
+                    themeToggleBtn.textContent = '🌙';
+                } else {
+                    document.documentElement.setAttribute('data-theme', 'light');
+                    localStorage.setItem('theme', 'light');
+                    themeToggleBtn.textContent = '☀️';
+                }
+            });
+        }
+    </script>
 
 </body>
 </html>

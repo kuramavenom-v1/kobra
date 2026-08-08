@@ -128,26 +128,26 @@
         </div>
     </section>
 
-    <!-- محتوى صفحة من نحن (الرؤية، الرسالة، القيمة) -->
+    <!-- محتوى صفحة من نحن (الرؤية، الرسالة، من نحن) ببطاقات متساوية -->
     <section class="section-padding" style="padding-top: 30px;">
         <div class="container">
             <div class="grid">
-                <!-- بطاقة من نحن الرئيسية -->
-                <div class="card" style="grid-column: span 2;">
-                    <h3>نحن وكالة تقنية متكاملة</h3>
-                    <p style="margin-bottom: 15px; padding: 0 25px;">بدأت Korda كفكرة طموحة لتمكين الشركات من الدخول إلى العالم الرقمي بقوة وثبات. نجمع بين الإبداع البرمجي والتصميم العصري لنقدم حلولاً تحدث فارقاً حقيقياً في أعمال عملائنا.</p> 
+                <!-- بطاقة من نحن -->
+                <div class="card" style="display: flex; flex-direction: column; justify-content: space-between;">
+                    <h3>من نحن</h3>
+                    <p style="margin-bottom: 0; line-height: 1.8;">بدأت Korda كفكرة طموحة لتمكين الشركات من الدخول إلى العالم الرقمي بقوة وثبات، جامع بين الإبداع البرمجي والتصميم العصري.</p> 
                 </div>
 
                 <!-- بطاقة رؤيتنا -->
-                <div class="card">
+                <div class="card" style="display: flex; flex-direction: column; justify-content: space-between;">
                     <h3>رؤيتنا</h3>
-                    <p>أن نكون الشريك التقني الأول والموثوق للشركات الباحثحة عن الابتكار والريادة في الشرق الأوسط.</p>
+                    <p style="margin-bottom: 0; line-height: 1.8;">أن نكون الشريك التقني الأول والموثوق للشركات الباحثة عن الابتكار والريادة الرقمية في المنطقة.</p>
                 </div>
 
-                <!-- بطاقة قيمنا -->
-                <div class="card">
-                    <h3>قيمنا</h3>
-                    <p>الشفافية المطلقة، الالتزام بالمعايير العالمية، التركيز على تحقيق أهداف العميل.</p>
+                <!-- بطاقة رسالتنا (الكرت الثالث الجديد) -->
+                <div class="card" style="display: flex; flex-direction: column; justify-content: space-between;">
+                    <h3>رسالتنا</h3>
+                    <p style="margin-bottom: 0; line-height: 1.8;">تقديم حلول برمجية مبتكرة وعالية الجودة تسهم في نمو أعمال عملائنا وتسهيل تجربتهم التقنية بشكل مستمر.</p>
                 </div>
             </div>
         </div>
@@ -181,7 +181,7 @@
 
         if (themeToggleBtn) {
             themeToggleBtn.addEventListener('click', () => {
-                let theme = document.documentElement.getAttribute('data-theme');
+                let theme = document.documentElement.setAttribute('data-theme');
                 if (theme === 'light') {
                     document.documentElement.setAttribute('data-theme', 'dark');
                     localStorage.setItem('theme', 'dark');
