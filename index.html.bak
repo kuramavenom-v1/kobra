@@ -5,13 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Korda | الرئيسية</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* ستايل خاص بقسم الـ Hero مع خلفية صورة والنص العائم فوقها */
+        .hero-banner-box {
+            position: relative;
+            width: 100%;
+            max-width: 1100px;
+            margin: 40px auto 0;
+            height: 500px; /* ارتفاع المربع */
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-image: url('images/hero-main.jpg'); /* ضع مسار صورتك هنا */
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* طبقة تغشية سوداء شفافة فوق الصورة لكي تظهر النصوص بوضوح وقوة */
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(5, 5, 5, 0.75); /* تحكم في درجة العتمة السوداء هنا */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
 
 <!-- الهيدر الاحترافي -->
 <header class="header">
     <div class="container">
-        <a href="index.html" class="logo">☂ Korda</a>
+        <a href="index.html" class="logo">Korda</a>
         
         <!-- روابط سطح المكتب العادية -->
         <nav class="nav-links">
@@ -50,14 +85,14 @@
         </ul>
     </div>
 
-        <div class="mobile-footer-info">
-        <div class="mobile-contact-item">📞 +966553910586</div>
+    <div class="mobile-footer-info">
+        <div class="mobile-contact-item">📞 0501861968</div>
         <div class="mobile-contact-item">✉️ info@korda.com</div>
         <div class="mobile-socials">
-            <a href="#">G</a>
-            <a href="#">W</a>
-            <a href="#">T</a>
-            <a href="#">A</a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#">tiktok</a>
+            <a href="#"></a>
         </div>
         <a href="contact.html" class="btn-primary" style="text-align: center; margin-top: 10px;">طلب خدمة</a>
     </div>
@@ -78,25 +113,24 @@
     });
 </script>
 
-    <!-- قسم Hero الرئيسي مع الصورة الواسعة بالأسفل -->
-    <section class="hero">
+    <!-- قسم Hero الرئيسي مع صورة خلفية والنصوص عائمة فوقها داخل المربع -->
+    <section class="hero" style="padding-top: 40px; padding-bottom: 90px;">
         <div class="container">
-            <h1>نبتكر حلولاً تقنية ترسم مستقبل عملك</h1>
-            <p>وكالة رقمية متكاملة تقدم أحدث تقنيات الويب وتطوير البرمجيات للشركات الطموحة.</p>
-            <div class="hero-buttons" style="margin-bottom: 50px;">
-                <a href="portfolio.html" class="btn-primary">استعرض أعمالنا</a>
-                <a href="about.html" class="btn-outline">تعرف علينا</a>
-            </div>
-
-            <!-- الصورة المضافة أسفل الأزرار بنفس ستايل الكروت الواسعة والواضحة -->
-            <div style="max-width: 900px; margin: 0 auto; border-radius: 8px; overflow: hidden; border: 1px solid var(--border); background-color: var(--card-bg);">
-                <img src="images/hero-main.jpg" alt="حلول Korda التقنية" style="width: 100%; height: 380px; object-fit: cover; display: block;">
+            <div class="hero-banner-box">
+                <div class="hero-overlay">
+                    <h1 style="font-size: 40px; margin-bottom: 15px; font-weight: 700; max-width: 800px;">نبتكر حلولاً تقنية ترسم مستقبل عملك</h1>
+                    <p style="font-size: 16px; opacity: 0.8; margin-bottom: 30px; max-width: 600px;">وكالة رقمية متكاملة تقدم أحدث تقنيات الويب وتطوير البرمجيات للشركات الطموحة.</p>
+                    <div class="hero-buttons">
+                        <a href="portfolio.html" class="btn-primary">استعرض أعمالنا</a>
+                        <a href="about.html" class="btn-outline">تعرف علينا</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- قسم مميزات الشركة -->
-    <section class="section-padding">
+    <section class="section-padding" style="padding-top: 0;">
         <div class="container">
             <h2 class="section-title">لماذا اختيار Korda</h2>
             <div class="grid">

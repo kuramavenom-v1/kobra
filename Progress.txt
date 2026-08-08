@@ -1,0 +1,2 @@
+// بفضل الله تعالى اليوم 7/8 تم بحمد الله بناء المشروع بالكامل و المتبقي فقط اضافه زر الوضع الليلي و النهاري و اضافه بقيه الصور و تحديث بعض القوالب الخاصه ب about لظبط الحجم
+// Thanks be to God, today, August 7th, the project was fully built. All that remains is adding the night and day mode buttons, adding the remaining images, and updating some of the "about" templates to adjust the size. 
