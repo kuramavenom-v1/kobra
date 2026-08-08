@@ -12,7 +12,7 @@
     <!-- الهيدر الاحترافي -->
     <header class="header">
         <div class="container">
-            <a href="index.html" class="logo">Korda</a>
+            <a href="index.html" class="logo">☂ Korda</a>
             
             <!-- روابط سطح المكتب العادية -->
             <nav class="nav-links">
@@ -154,7 +154,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-bottom">
-                <p>&copy; 2026 Korda. كوردا معكم لحياة أفضل 🌙</p>
+                <p>&copy; 2026 Korda</p>
             </div>
         </div>
     </footer>

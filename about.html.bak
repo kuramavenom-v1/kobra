@@ -144,7 +144,7 @@
                     <p style="margin-bottom: 0; line-height: 1.8;">أن نكون الشريك التقني الأول والموثوق للشركات الباحثة عن الابتكار والريادة الرقمية في المنطقة.</p>
                 </div>
 
-                <!-- بطاقة رسالتنا (الكرت الثالث الجديد) -->
+                <!-- بطاقة رسالتنا -->
                 <div class="card" style="display: flex; flex-direction: column; justify-content: space-between;">
                     <h3>رسالتنا</h3>
                     <p style="margin-bottom: 0; line-height: 1.8;">تقديم حلول برمجية مبتكرة وعالية الجودة تسهم في نمو أعمال عملائنا وتسهيل تجربتهم التقنية بشكل مستمر.</p>
@@ -157,7 +157,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2026 Korda. جميع الحقوق محفوظة.</p>
+                <p>&copy; 2026 Korda.</p>
                 <div class="footer-links">
                     <a href="privacy.html">سياسة الخصوصية</a>
                     <a href="terms.html">الشروط والأحكام</a>
@@ -166,33 +166,30 @@
         </div>
     </footer>
 
-    <!-- سكريبت الوضع الليلي / النهاري -->
+    <!-- سكريبت الوضع الليلي / النهاري المحدث والمصحح -->
     <script>
-        const themeToggleBtn = document.getElementById('themeToggleBtn');
-        const currentTheme = localStorage.getItem('theme') || 'dark';
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeToggleBtn = document.getElementById('themeToggleBtn');
+            const currentTheme = localStorage.getItem('theme') || 'dark';
 
-        if (currentTheme === 'light') {
-            document.documentElement.setAttribute('data-theme', 'light');
-            if (themeToggleBtn) themeToggleBtn.textContent = '☀️';
-        } else {
-            document.documentElement.setAttribute('data-theme', 'dark');
-            if (themeToggleBtn) themeToggleBtn.textContent = '🌙';
-        }
+            document.documentElement.setAttribute('data-theme', currentTheme);
+            if (themeToggleBtn) {
+                themeToggleBtn.textContent = currentTheme === 'light' ? '☀️' : '🌙';
 
-        if (themeToggleBtn) {
-            themeToggleBtn.addEventListener('click', () => {
-                let theme = document.documentElement.setAttribute('data-theme');
-                if (theme === 'light') {
-                    document.documentElement.setAttribute('data-theme', 'dark');
-                    localStorage.setItem('theme', 'dark');
-                    themeToggleBtn.textContent = '🌙';
-                } else {
-                    document.documentElement.setAttribute('data-theme', 'light');
-                    localStorage.setItem('theme', 'light');
-                    themeToggleBtn.textContent = '☀️';
-                }
-            });
-        }
+                themeToggleBtn.addEventListener('click', () => {
+                    let theme = document.documentElement.getAttribute('data-theme');
+                    if (theme === 'light') {
+                        document.documentElement.setAttribute('data-theme', 'dark');
+                        localStorage.setItem('theme', 'dark');
+                        themeToggleBtn.textContent = '🌙';
+                    } else {
+                        document.documentElement.setAttribute('data-theme', 'light');
+                        localStorage.setItem('theme', 'light');
+                        themeToggleBtn.textContent = '☀️';
+                    }
+                });
+            }
+        });
     </script>
 
 </body>
