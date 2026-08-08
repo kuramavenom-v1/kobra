@@ -93,28 +93,31 @@
     <section class="section-padding">
         <div class="container">
             <div style="max-width: 600px; margin: 0 auto; background: var(--card-bg); padding: 40px; border-radius: 8px; border: 1px solid var(--border);">
-                <h2 style="font-size: 24px; margin-bottom: 25px; text-align: center;">أرسل لنا رسالة</h2>
+                <h2 style="font-size: 24px; margin-bottom: 25px; text-align: center; color: var(--text-color);">أرسل لنا رسالة</h2>
                 <form action="https://api.web3forms.com/submit" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
                     
-                    <!-- ضع المفتاح الذي وصلك على إيميل الشركة هنا -->
+                    <!-- ضع مفتاح Web3Forms الخاص بك هنا بدلاً من الكلمة التالية -->
                     <input type="hidden" name="access_key" value="ضع_مفتاحك_هنا">
 
+                    <!-- عنوان الرسالة التي ستصلك على البريد الإلكتروني -->
+                    <input type="hidden" name="subject" value="رسالة جديدة من موقع Korda التقني">
+
                     <div>
-                        <label style="display: block; margin-bottom: 8px; font-size: 14px; opacity: 0.8;">الاسم الثنائي</label>
+                        <label style="display: block; margin-bottom: 8px; font-size: 14px; opacity: 0.8; color: var(--text-color);">الاسم الثنائي</label>
                         <input type="text" name="name" placeholder="أدخل اسمك" required style="width: 100%; padding: 12px; background: var(--bg-color); border: 1px solid var(--border); border-radius: 4px; color: var(--text-color);">
                     </div>
                     
                     <div>
-                        <label style="display: block; margin-bottom: 8px; font-size: 14px; opacity: 0.8;">البريد الإلكتروني</label>
+                        <label style="display: block; margin-bottom: 8px; font-size: 14px; opacity: 0.8; color: var(--text-color);">البريد الإلكتروني</label>
                         <input type="email" name="email" placeholder="name@example.com" required style="width: 100%; padding: 12px; background: var(--bg-color); border: 1px solid var(--border); border-radius: 4px; color: var(--text-color);">
                     </div>
                     
                     <div>
-                        <label style="display: block; margin-bottom: 8px; font-size: 14px; opacity: 0.8;">الرسالة</label>
+                        <label style="display: block; margin-bottom: 8px; font-size: 14px; opacity: 0.8; color: var(--text-color);">الرسالة</label>
                         <textarea name="message" rows="5" placeholder="اكتب تفاصيل مشروعك أو استفسارك هنا..." required style="width: 100%; padding: 12px; background: var(--bg-color); border: 1px solid var(--border); border-radius: 4px; color: var(--text-color); resize: vertical;"></textarea>
                     </div>
 
-                    <!-- تحويل العميل لصفحة شكر بعد الإرسال -->
+                    <!-- تحويل العميل لصفحة نجاح الإرسال تلقائياً -->
                     <input type="hidden" name="redirect" value="https://web3forms.com/success">
 
                     <button type="submit" class="btn-primary" style="width: 100%; cursor: pointer; border: none; padding: 14px; font-size: 16px;">إرسال الرسالة</button>
@@ -138,31 +141,28 @@
 
     <!-- سكريبت الوضع الليلي / النهاري -->
     <script>
-        const themeToggleBtn = document.getElementById('themeToggleBtn');
-        const currentTheme = localStorage.getItem('theme') || 'dark';
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeToggleBtn = document.getElementById('themeToggleBtn');
+            const currentTheme = localStorage.getItem('theme') || 'dark';
 
-        if (currentTheme === 'light') {
-            document.documentElement.setAttribute('data-theme', 'light');
-            if (themeToggleBtn) themeToggleBtn.textContent = '☀️';
-        } else {
-            document.documentElement.setAttribute('data-theme', 'dark');
-            if (themeToggleBtn) themeToggleBtn.textContent = '🌙';
-        }
+            document.documentElement.setAttribute('data-theme', currentTheme);
+            if (themeToggleBtn) {
+                themeToggleBtn.textContent = currentTheme === 'light' ? '☀️' : '🌙';
 
-        if (themeToggleBtn) {
-            themeToggleBtn.addEventListener('click', () => {
-                let theme = document.documentElement.getAttribute('data-theme');
-                if (theme === 'light') {
-                    document.documentElement.setAttribute('data-theme', 'dark');
-                    localStorage.setItem('theme', 'dark');
-                    themeToggleBtn.textContent = '🌙';
-                } else {
-                    document.documentElement.setAttribute('data-theme', 'light');
-                    localStorage.setItem('theme', 'light');
-                    themeToggleBtn.textContent = '☀️';
-                }
-            });
-        }
+                themeToggleBtn.addEventListener('click', () => {
+                    let theme = document.documentElement.getAttribute('data-theme');
+                    if (theme === 'light') {
+                        document.documentElement.setAttribute('data-theme', 'dark');
+                        localStorage.setItem('theme', 'dark');
+                        themeToggleBtn.textContent = '🌙';
+                    } else {
+                        document.documentElement.setAttribute('data-theme', 'light');
+                        localStorage.setItem('theme', 'light');
+                        themeToggleBtn.textContent = '☀️';
+                    }
+                });
+            }
+        });
     </script>
 
 </body>
