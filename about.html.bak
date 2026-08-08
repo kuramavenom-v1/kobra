@@ -132,8 +132,7 @@
                 <!-- بطاقة من نحن الرئيسية -->
                 <div class="card" style="grid-column: span 2;">
                     <h3>نحن وكالة تقنية متكاملة</h3>
-                    <p style="margin-bottom: 15px;">بدأت Korda كفكرة طموحة لتمكين الشركات من الدخول إلى العالم الرقمي بقوة وثبات. نجمع بين الإبداع البرمجي والتصميم العصري لنقدم حلولاً تحدث فارقاً حقيقياً في أعمال عملائنا.</p>
-                    <p>نؤمن بأن الجودة والالتزام هما أساس النجاح المستدام، ولذلك نحرص على بناء علاقات طويلة الأمد تعتمد على الثقة والاحترافية المطلقة.</p>
+                    <p style="margin-bottom: 15px;">بدأت Korda كفكرة طموحة لتمكين الشركات من الدخول إلى العالم الرقمي بقوة وثبات. نجمع بين الإبداع البرمجي والتصميم العصري لنقدم حلولاً تحدث فارقاً حقيقياً في أعمال عملائنا.</p> 
                 </div>
 
                 <!-- بطاقة رؤيتنا -->
@@ -142,11 +141,7 @@
                     <p>أن نكون الشريك التقني الأول والموثوق للشركات الباحثحة عن الابتكار والريادة في الشرق الأوسط.</p>
                 </div>
 
-                <!-- بطاقة رسالتنا -->
-                <div class="card">
-                    <h3>رسالتنا</h3>
-                    <p>تقديم حلول برمجية عالية الأداء قابلة للتطوير، وتلبي احتياجات السوق بدقة واحترافية.</p>
-                </div>
+                
 
                 <!-- بطاقة قيمنا -->
                 <div class="card">
@@ -169,6 +164,34 @@
             </div>
         </div>
     </footer>
+<script>
+    const themeToggleBtn = document.getElementById('themeToggleBtn');
+    const currentTheme = localStorage.getItem('theme') || 'dark';
+
+    // تطبيق الثيم المحفوظ مسبقاً عند تحميل الصفحة
+    if (currentTheme === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+        themeToggleBtn.textContent = '☀️';
+    } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        themeToggleBtn.textContent = '🌙';
+    }
+
+    // التبديل عند الضغط على الزر
+    themeToggleBtn.addEventListener('click', () => {
+        let theme = document.documentElement.getAttribute('data-theme');
+        
+        if (theme === 'light') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+            themeToggleBtn.textContent = '🌙';
+        } else {
+            document.documentElement.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light');
+            themeToggleBtn.textContent = '☀️';
+        }
+    });
+</script>
 
 </body>
 </html>

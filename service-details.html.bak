@@ -8,75 +8,79 @@
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-<div id="header-container"></div>
- <!-- الهيدر الاحترافي -->
-<header class="header">
-    <div class="container">
-        <a href="index.html" class="logo">☂ Korda</a>
-        
-        <!-- روابط سطح المكتب العادية -->
-        <nav class="nav-links">
-            <a href="index.html" class="nav-link">الرئيسية</a>
-            <a href="about.html" class="nav-link">من نحن</a>
-            <a href="services.html" class="nav-link">الخدمات</a>
-            <a href="portfolio.html" class="nav-link">الأعمال</a>
-            <a href="team.html" class="nav-link">الفريق</a>
-        </nav>
 
-        <div class="header-controls">
-            <a href="services.html" class="btn-primary" style="display: none; @media(min-width: 768px){display:inline-block;}">تواصل معنا</a>
+    <!-- الهيدر الاحترافي -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">Korda</a>
             
-            <!-- زر القائمة الجانبية للجوال -->
-            <button class="menu-toggle" id="openMenuBtn">☰</button>
-        </div>
-    </div>
-</header>
+            <!-- روابط سطح المكتب العادية -->
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">الرئيسية</a>
+                <a href="about.html" class="nav-link">من نحن</a>
+                <a href="services.html" class="nav-link active">الخدمات</a>
+                <a href="portfolio.html" class="nav-link">الأعمال</a>
+                <a href="team.html" class="nav-link">الفريق</a>
+                <a href="contact.html" class="nav-link">اتصل بنا</a>
+            </nav>
 
-<!-- القائمة الجانبية المنبثقة للجوال (Drawer) -->
-<div class="mobile-menu" id="mobileMenu">
-    <div>
-        <div class="mobile-menu-header">
-            <a href="index.html" class="logo" style="font-size: 20px;">Korda</a>
-            <button class="close-menu" id="closeMenuBtn">&times;</button>
+            <div class="header-controls">
+                <!-- زر الوضع الليلي/النهاري -->
+                <button class="theme-toggle-btn" id="themeToggleBtn" title="تغيير الوضع">🌙</button>
+
+                <a href="contact.html" class="btn-primary" style="display: none; @media(min-width: 768px){display:inline-block;}">تواصل معنا</a>
+                
+                <!-- زر القائمة الجانبية للجوال -->
+                <button class="menu-toggle" id="openMenuBtn">☰</button>
+            </div>
         </div>
-        
-        <ul class="mobile-nav-links">
-            <li><a href="index.html">الرئيسية</a></li>
-            <li><a href="about.html">من نحن</a></li>
-            <li><a href="services.html">خدماتنا</a></li>
-            <li><a href="portfolio.html">أعمالنا</a></li>
-            <li><a href="team.html">فريق العمل</a></li>
-            <li><a href="services.html">اتصل بنا</a></li>
-        </ul>
-    </div>
+    </header>
+
+    <!-- القائمة الجانبية المنبثقة للجوال (Drawer) -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div>
+            <div class="mobile-menu-header">
+                <a href="index.html" class="logo" style="font-size: 20px;">Korda</a>
+                <button class="close-menu" id="closeMenuBtn">&times;</button>
+            </div>
+            
+            <ul class="mobile-nav-links">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="services.html">خدماتنا</a></li>
+                <li><a href="portfolio.html">أعمالنا</a></li>
+                <li><a href="team.html">فريق العمل</a></li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+            </ul>
+        </div>
 
         <div class="mobile-footer-info">
-        <div class="mobile-contact-item">📞 +966553910586</div>
-        <div class="mobile-contact-item">✉️ info@korda.com</div>
-        <div class="mobile-socials">
-            <a href="#">G</a>
-            <a href="#">W</a>
-            <a href="#">T</a>
-            <a href="#">A</a>
+            <div class="mobile-contact-item">📞 +966553910586</div>
+            <div class="mobile-contact-item">✉️ info@korda.com</div>
+            <div class="mobile-socials">
+                <a href="#">G</a>
+                <a href="#">W</a>
+                <a href="#">T</a>
+                <a href="#">A</a>
+            </div>
+            <a href="contact.html" class="btn-primary" style="text-align: center; margin-top: 10px;">طلب خدمة</a>
         </div>
-        <a href="services.html" class="btn-primary" style="text-align: center; margin-top: 10px;">طلب خدمة</a>
     </div>
-</div>
 
-<!-- سكريبت تشغيل وإغلاق القائمة -->
-<script>
-    const openMenuBtn = document.getElementById('openMenuBtn');
-    const closeMenuBtn = document.getElementById('closeMenuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
+    <!-- سكريبت تشغيل وإغلاق القائمة -->
+    <script>
+        const openMenuBtn = document.getElementById('openMenuBtn');
+        const closeMenuBtn = document.getElementById('closeMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
 
-    openMenuBtn.addEventListener('click', () => {
-        mobileMenu.classList.add('active');
-    });
+        openMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+        });
 
-    closeMenuBtn.addEventListener('click', () => {
-        mobileMenu.classList.remove('active');
-    });
-</script>
+        closeMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+        });
+    </script>
 
     <!-- Page Banner -->
     <div class="page-banner">
@@ -91,13 +95,13 @@
         <div class="container details-layout">
             <!-- الشرح التفصيلي للخدمة -->
             <div class="main-content">
-                <div style="background: #e2e8f0; height: 350px; border-radius: 8px; margin-bottom: 30px; display: flex; align-items: center; justify-content: center; color: #94a3b8;">صورة توضيحية للخدمة</div>
+                <div style="background: var(--card-bg); border: 1px solid var(--border); height: 350px; border-radius: 8px; margin-bottom: 30px; display: flex; align-items: center; justify-content: center; color: var(--text-color); opacity: 0.7;">صورة توضيحية للخدمة</div>
                 
                 <h2 style="margin-bottom: 15px; color: var(--secondary);">عن الخدمة</h2>
-                <p style="margin-bottom: 25px;">نقدم في Korda خدمة تطوير مواقع الويب المخصصة لتلبية احتياجات الشركات والمؤسسات. نعتمد على أحدث التقنيات البرمجية لضمان سرعة التصفح، التوافق التام مع الأجهزة المحمولة، وحماية البيانات بأعلى المعايير الأمنية.</p>
+                <p style="margin-bottom: 25px; line-height: 1.8;">نقدم في Korda خدمة تطوير مواقع الويب المخصصة لتلبية احتياجات الشركات والمؤسسات. نعتمد على أحدث التقنيات البرمجية لضمان سرعة التصفح، التوافق التام مع الأجهزة المحمولة، وحماية البيانات بأعلى المعايير الأمنية.</p>
                 
                 <h2 style="margin-bottom: 15px; color: var(--secondary);">مميزات الخدمة</h2>
-                <ul style="margin-bottom: 25px; padding-right: 20px; list-style-type: disc;">
+                <ul style="margin-bottom: 25px; padding-right: 20px; list-style-type: disc; line-height: 1.8;">
                     <li style="margin-bottom: 10px;">تصميم متجاوب (Responsive Design).</li>
                     <li style="margin-bottom: 10px;">لوحة تحكم سهلة لإدارة المحتوى.</li>
                     <li style="margin-bottom: 10px;">تهيئة الموقع لمحركات البحث (SEO).</li>
@@ -105,7 +109,7 @@
                 </ul>
 
                 <h2 style="margin-bottom: 15px; color: var(--secondary);">خطوات العمل</h2>
-                <ol style="margin-bottom: 25px; padding-right: 20px;">
+                <ol style="margin-bottom: 25px; padding-right: 20px; line-height: 1.8;">
                     <li style="margin-bottom: 10px;">تحليل المتطلبات وفهم احتياجات العميل.</li>
                     <li style="margin-bottom: 10px;">رسم الهيكل المبدئي وتصميم واجهة المستخدم (UI/UX).</li>
                     <li style="margin-bottom: 10px;">البرمجة والتطوير وربط قواعد البيانات.</li>
@@ -114,26 +118,33 @@
             </div>
 
             <!-- نموذج الطلب (Sidebar) -->
-            <div class="sidebar">
+            <div class="sidebar" style="background: var(--card-bg); border: 1px solid var(--border); padding: 30px; border-radius: 8px;">
                 <h3 style="margin-bottom: 20px; color: var(--primary);">اطلب هذه الخدمة الآن</h3>
-                <form action="#" method="POST">
+                <form action="https://api.web3forms.com/submit" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+                    
+                    <input type="hidden" name="access_key" value="ضع_مفتاحك_هنا">
+
                     <div class="form-group">
-                        <label for="name">الاسم الكامل</label>
-                        <input type="text" id="name" class="form-control" placeholder="أدخل اسمك" required>
+                        <label for="name" style="display: block; margin-bottom: 6px; font-size: 14px;">الاسم الكامل</label>
+                        <input type="text" id="name" name="name" class="form-control" placeholder="أدخل اسمك" required style="width: 100%; padding: 12px; background: var(--bg-color); border: 1px solid var(--border); border-radius: 4px; color: var(--text-color);">
                     </div>
+                    
                     <div class="form-group">
-                        <label for="email">البريد الإلكتروني</label>
-                        <input type="email" id="email" class="form-control" placeholder="example@mail.com" required>
+                        <label for="email" style="display: block; margin-bottom: 6px; font-size: 14px;">البريد الإلكتروني</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="example@mail.com" required style="width: 100%; padding: 12px; background: var(--bg-color); border: 1px solid var(--border); border-radius: 4px; color: var(--text-color);">
                     </div>
+                    
                     <div class="form-group">
-                        <label for="phone">رقم الجوال</label>
-                        <input type="text" id="phone" class="form-control" placeholder="0500000000" required>
+                        <label for="phone" style="display: block; margin-bottom: 6px; font-size: 14px;">رقم الجوال</label>
+                        <input type="text" id="phone" name="phone" class="form-control" placeholder="0500000000" required style="width: 100%; padding: 12px; background: var(--bg-color); border: 1px solid var(--border); border-radius: 4px; color: var(--text-color);">
                     </div>
+                    
                     <div class="form-group">
-                        <label for="details">تفاصيل المشروع</label>
-                        <textarea id="details" class="form-control" rows="4" placeholder="اكتب تفاصيل طلبك هنا..." required></textarea>
+                        <label for="details" style="display: block; margin-bottom: 6px; font-size: 14px;">تفاصيل المشروع</label>
+                        <textarea id="details" name="details" class="form-control" rows="4" placeholder="اكتب تفاصيل طلبك هنا..." required style="width: 100%; padding: 12px; background: var(--bg-color); border: 1px solid var(--border); border-radius: 4px; color: var(--text-color); resize: vertical;"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary" style="width: 100%;">إرسال الطلب</button>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%; cursor: pointer; border: none; padding: 12px;">إرسال الطلب</button>
                 </form>
             </div>
         </div>
@@ -143,10 +154,39 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-bottom">
-                <p>كوردا معكم ل حياه افضل 🌙</p>
+                <p>&copy; 2026 Korda. كوردا معكم لحياة أفضل 🌙</p>
             </div>
         </div>
     </footer>
+
+    <!-- سكريبت الوضع الليلي / النهاري -->
+    <script>
+        const themeToggleBtn = document.getElementById('themeToggleBtn');
+        const currentTheme = localStorage.getItem('theme') || 'dark';
+
+        if (currentTheme === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light');
+            if (themeToggleBtn) themeToggleBtn.textContent = '☀️';
+        } else {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            if (themeToggleBtn) themeToggleBtn.textContent = '🌙';
+        }
+
+        if (themeToggleBtn) {
+            themeToggleBtn.addEventListener('click', () => {
+                let theme = document.documentElement.getAttribute('data-theme');
+                if (theme === 'light') {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    localStorage.setItem('theme', 'dark');
+                    themeToggleBtn.textContent = '🌙';
+                } else {
+                    document.documentElement.setAttribute('data-theme', 'light');
+                    localStorage.setItem('theme', 'light');
+                    themeToggleBtn.textContent = '☀️';
+                }
+            });
+        }
+    </script>
 
 </body>
 </html>
